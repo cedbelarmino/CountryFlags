@@ -2,8 +2,11 @@
 <resources>
 
 
-    <dimen name="normal_padding">2dp</dimen>
+    <dimen name="normal_padding">10dp</dimen>
     <dimen name="flag_size">100dp</dimen>
     <dimen name="country_item_size">200dp</dimen>
-    <dimen name="normal_text_size">20dp</dimen>
+    <dimen name="normal_text_size">20sp</dimen>
+    <dimen name="card_elevation">10dp</dimen>
+
+
 </resources>
