@@ -26,6 +26,10 @@
             android:name=".view.CountryInfoActivity"
             android:screenOrientation="fullSensor"/>
 
+
+
     </application>
+
+
 
 </manifest>

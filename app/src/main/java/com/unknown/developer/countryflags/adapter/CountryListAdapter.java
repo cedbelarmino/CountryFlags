@@ -3,6 +3,7 @@ package com.unknown.developer.countryflags.adapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
 import com.unknown.developer.countryflags.R;
+import com.unknown.developer.countryflags.constant.ApplicationString;
 import com.unknown.developer.countryflags.model.Country;
 import com.unknown.developer.countryflags.view.CountryInfoActivity;
 
@@ -55,9 +58,12 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
 
 
         holder.imgCountryFlag.setOnClickListener(view -> {
-            Intent intent = new Intent(context,CountryInfoActivity.class);
-            intent.putExtra("CountryName", country.getName());
 
+            Gson gson = new Gson();
+            String countryString = gson.toJson(country);
+
+            Intent intent = new Intent(context, CountryInfoActivity.class);
+            intent.putExtra(ApplicationString.COUNTRY, countryString);
 
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
@@ -124,8 +130,8 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
         public MyViewHolder(final View itemView) {
             super(itemView);
 
-            tvCountryName = (TextView) itemView.findViewById(R.id.countryName);
-            imgCountryFlag = (ImageView) itemView.findViewById(R.id.countryFlag);
+            tvCountryName =  itemView.findViewById(R.id.countryName);
+            imgCountryFlag =  itemView.findViewById(R.id.countryFlag);
 
         }
     }

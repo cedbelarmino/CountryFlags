@@ -4,4 +4,6 @@ public class ApplicationString {
 
     public static final String BASE_URL = "https://restcountries.com/";
 
+    public static final String COUNTRY = "country";
+
 }

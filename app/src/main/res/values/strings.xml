@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">CountryFlags</string>
     <string name="country_flag_description">flag</string>
-    <string name="menu_search_stirng">Search</string>
+    <string name="menu_search_string">Search</string>
+
+
+    <string name="country_info_name">Name:</string>
+    <string name="country_info_abbreviation">Abbreviation:</string>
+    <string name="country_info_capital">Capital:</string>
+    <string name="country_info_calling_codes">Calling codes:</string>
+    <string name="country_info_population">Population:</string>
+    <string name="country_info_currencies">Currencies:</string>
+
+
+
+    <string name="country_info_no_currencies">No Currencies</string>
+
 </resources>
