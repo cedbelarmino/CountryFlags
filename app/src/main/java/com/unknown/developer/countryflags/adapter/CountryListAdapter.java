@@ -133,6 +133,7 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
             tvCountryName =  itemView.findViewById(R.id.countryName);
             imgCountryFlag =  itemView.findViewById(R.id.countryFlag);
 
+
         }
     }
 
