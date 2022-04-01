@@ -5,6 +5,8 @@ import com.unknown.developer.countryflags.model.Currency;
 import com.unknown.developer.countryflags.model.Language;
 import com.unknown.developer.countryflags.model.Translations;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.List;
 
 public class StringListHelper {
@@ -55,5 +57,16 @@ public class StringListHelper {
 
         return builder.toString().replace(",", "");
     }
+
+    public String getPopulationFormatter(int population){
+
+        NumberFormat formatter = new DecimalFormat("#,###");
+
+        return formatter.format(population);
+
+    }
+
+
+
 
 }

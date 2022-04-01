@@ -37,7 +37,12 @@ public class CountryInfoActivity extends AppCompatActivity implements OnMapReady
             countryInfoTranslations,
             countryInfoCallingCodes,
             countryInfoRegion,
-            countryInfoBorders;
+            countryInfoBorders,
+            countryInfoNativeName,
+            countryInfoArea,
+            countryInfoDenonym,
+            getCountryInfoCoordinates;
+
     Gson gson;
     double lat = 0.0;
     double lng = 0.0;
@@ -66,6 +71,10 @@ public class CountryInfoActivity extends AppCompatActivity implements OnMapReady
         countryInfoCallingCodes = findViewById(R.id.countryInfoCallingCodes);
         countryInfoRegion = findViewById(R.id.countryInfoRegion);
         countryInfoBorders = findViewById(R.id.countryInfoBorders);
+        countryInfoNativeName = findViewById(R.id.countryInfoNativeName);
+        countryInfoArea = findViewById(R.id.countryInfoArea);
+        countryInfoDenonym = findViewById(R.id.countryInfoDenonym);
+        getCountryInfoCoordinates = findViewById(R.id.countryInfoLngLat);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -86,7 +95,7 @@ public class CountryInfoActivity extends AppCompatActivity implements OnMapReady
         countryInfoName.setText(country.getName());
         countryInfoAbbreviation.setText(country.getAlpha2Code());
         countryInfoCapital.setText(country.getCapital());
-        countryInfoPopulations.setText(String.valueOf(country.getPopulation()));
+        countryInfoPopulations.setText(stringListHelper.getPopulationFormatter(country.getPopulation()));
 
         if (country.getCurrencies() != null) {
             countryInfoCurrencies.setText(stringListHelper.getCurrencyValue(country.getCurrencies()));
@@ -100,16 +109,20 @@ public class CountryInfoActivity extends AppCompatActivity implements OnMapReady
         } else {
             countryInfoBorders.setText(this.getResources().getString(R.string.country_info_no_border));
         }
+        countryInfoNativeName.setText(country.getNativeName());
+        countryInfoArea.setText(String.valueOf(country.getArea()));
+        countryInfoDenonym.setText(country.getDemonym());
+        getCountryInfoCoordinates.setText(country.getLatlng().toString());
     }
 
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
 
-      if (country.getLatlng()!=null){
-           lat = country.getLatlng().get(0);
-           lng = country.getLatlng().get(1);
-      }
+        if (country.getLatlng() != null) {
+            lat = country.getLatlng().get(0);
+            lng = country.getLatlng().get(1);
+        }
 
         LatLng latLng = new LatLng(lat, lng);
         googleMap.addMarker(new MarkerOptions()

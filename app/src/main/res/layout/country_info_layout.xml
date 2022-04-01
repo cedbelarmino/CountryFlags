@@ -57,6 +57,38 @@
 
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".50"
+                        android:gravity="start"
+                        android:text="@string/country_info_native_name"
+                        android:textSize="@dimen/country_info_text_size" />
+
+                    <TextView
+                        android:id="@+id/countryInfoNativeName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/country_info_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -175,6 +207,38 @@
                         android:layout_height="match_parent"
                         android:layout_weight=".50"
                         android:gravity="start"
+                        android:text="@string/country_info_area"
+                        android:textSize="@dimen/country_info_text_size" />
+
+                    <TextView
+                        android:id="@+id/countryInfoArea"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/country_info_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".50"
+                        android:gravity="start"
                         android:text="@string/country_info_region"
                         android:textSize="@dimen/country_info_text_size" />
 
@@ -212,6 +276,38 @@
 
                     <TextView
                         android:id="@+id/countryInfoPopulations"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/country_info_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".50"
+                        android:gravity="start"
+                        android:text="@string/country_info_denonym"
+                        android:textSize="@dimen/country_info_text_size" />
+
+                    <TextView
+                        android:id="@+id/countryInfoDenonym"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight=".50"
@@ -348,6 +444,40 @@
 
                     <TextView
                         android:id="@+id/countryInfoTranslations"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:maxLines="15"
+                        android:singleLine="false"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/country_info_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".50"
+                        android:gravity="start"
+                        android:text="@string/country_info_lnglat"
+                        android:textSize="@dimen/country_info_text_size" />
+
+                    <TextView
+                        android:id="@+id/countryInfoLngLat"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight=".50"
