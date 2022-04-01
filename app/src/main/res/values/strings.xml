@@ -7,12 +7,16 @@
     <string name="country_info_name">Name:</string>
     <string name="country_info_abbreviation">Abbreviation:</string>
     <string name="country_info_capital">Capital:</string>
+    <string name="country_info_region">Region:</string>
     <string name="country_info_calling_codes">Calling codes:</string>
     <string name="country_info_population">Population:</string>
     <string name="country_info_currencies">Currencies:</string>
-
-
+    <string name="country_info_languages">Languages:</string>
+    <string name="country_info_borders">Borders:</string>
+    <string name="country_info_translations">Translations:</string>
 
     <string name="country_info_no_currencies">No Currencies</string>
+    <string name="country_info_no_border">Borders not available.</string>
+
 
 </resources>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
 
     <LinearLayout
@@ -15,229 +16,379 @@
             android:id="@+id/countryInfoFlag"
             android:layout_width="match_parent"
             android:layout_height="@dimen/country_item_size"
-            android:scaleType="centerCrop"
-            android:contentDescription="@string/country_flag_description"/>
-
-
-
-
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="vertical">
-
-               <androidx.cardview.widget.CardView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_margin="2dp"
-                   app:cardElevation="2dp">
-
-                   <LinearLayout
-                       android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:layout_margin="@dimen/card_info_margin">
-
-                       <TextView
-                           android:layout_width="0dp"
-                           android:layout_height="match_parent"
-                           android:text="@string/country_info_name"
-                           android:gravity="start"
-                           android:textSize="@dimen/country_info_text_size"
-                           android:layout_weight=".50"/>
-
-                       <TextView
-                           android:id="@+id/countryInfoName"
-                           android:layout_width="0dp"
-                           android:layout_height="wrap_content"
-                           android:text="@string/app_name"
-                           android:textStyle="bold"
-                           android:textSize="@dimen/country_info_text_size"
-                           android:layout_weight=".50"/>
-
-                   </LinearLayout>
-
-               </androidx.cardview.widget.CardView>
-
-
-
-               <androidx.cardview.widget.CardView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_margin="2dp"
-                   app:cardElevation="2dp">
-
-
-                   <LinearLayout
-                       android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:layout_margin="@dimen/card_info_margin">
-
-                       <TextView
-                           android:layout_width="0dp"
-                           android:layout_height="match_parent"
-                           android:text="@string/country_info_abbreviation"
-                           android:gravity="start"
-                           android:textSize="@dimen/country_info_text_size"
-                           android:layout_weight=".50"/>
-
-                       <TextView
-                           android:id="@+id/countryInfoAbbreviation"
-                           android:layout_width="0dp"
-                           android:layout_height="wrap_content"
-                           android:text="@string/app_name"
-                           android:textStyle="bold"
-                           android:textSize="@dimen/country_info_text_size"
-                           android:layout_weight=".50"/>
-
-                   </LinearLayout>
-
-               </androidx.cardview.widget.CardView>
-
-               <androidx.cardview.widget.CardView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_margin="2dp"
-                   app:cardElevation="2dp">
-
-                   <LinearLayout
-                       android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:layout_margin="@dimen/card_info_margin">
-
-                       <TextView
-                           android:layout_width="0dp"
-                           android:layout_height="match_parent"
-                           android:text="@string/country_info_capital"
-                           android:gravity="start"
-                           android:textSize="@dimen/country_info_text_size"
-                           android:layout_weight=".50"/>
-
-                       <TextView
-                           android:id="@+id/countryInfoCapital"
-                           android:layout_width="0dp"
-                           android:layout_height="wrap_content"
-                           android:text="@string/app_name"
-                           android:textStyle="bold"
-                           android:textSize="@dimen/country_info_text_size"
-                           android:layout_weight=".50"/>
-
-                   </LinearLayout>
-
-               </androidx.cardview.widget.CardView>
-
-               <androidx.cardview.widget.CardView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_margin="2dp"
-                   app:cardElevation="2dp">
-
-                   <LinearLayout
-                       android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:layout_margin="@dimen/card_info_margin">
-
-                       <TextView
-                           android:layout_width="0dp"
-                           android:layout_height="match_parent"
-                           android:text="@string/country_info_population"
-                           android:gravity="start"
-                           android:textSize="@dimen/country_info_text_size"
-                           android:layout_weight=".50"/>
-
-                       <TextView
-                           android:id="@+id/countryInfoPopulations"
-                           android:layout_width="0dp"
-                           android:layout_height="wrap_content"
-                           android:text="@string/app_name"
-                           android:textStyle="bold"
-                           android:textSize="@dimen/country_info_text_size"
-                           android:layout_weight=".50"/>
-
-                   </LinearLayout>
-
-               </androidx.cardview.widget.CardView>
-
-               <androidx.cardview.widget.CardView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_margin="2dp"
-                   app:cardElevation="2dp">
-
-                   <LinearLayout
-                       android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:layout_margin="@dimen/card_info_margin">
-
-                       <TextView
-                           android:layout_width="0dp"
-                           android:layout_height="match_parent"
-                           android:text="@string/country_info_currencies"
-                           android:gravity="start"
-                           android:textSize="@dimen/country_info_text_size"
-                           android:layout_weight=".50"
-                           />
-
-                       <TextView
-                           android:id="@+id/countryInfoCurrencies"
-                           android:layout_width="0dp"
-                           android:layout_height="wrap_content"
-                           android:text="@string/app_name"
-                           android:textStyle="bold"
-                           android:singleLine="false"
-                           android:maxLines="5"
-                           android:textSize="@dimen/country_info_text_size"
-                           android:layout_weight=".50"/>
-
-                   </LinearLayout>
-
-               </androidx.cardview.widget.CardView>
-
-
-
-
-
-
-
-              <!-- <androidx.cardview.widget.CardView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_margin="2dp"
-                   app:cardElevation="2dp">
-
-                   <LinearLayout
-                       android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:layout_margin="@dimen/card_info_margin">
-
-
-
-
-                   </LinearLayout>
-
-               </androidx.cardview.widget.CardView>-->
-
-
-
-
-
-           </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
+            android:contentDescription="@string/country_flag_description"
+            android:scaleType="centerCrop" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".50"
+                        android:gravity="start"
+                        android:text="@string/country_info_name"
+                        android:textSize="@dimen/country_info_text_size" />
+
+                    <TextView
+                        android:id="@+id/countryInfoName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/country_info_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardElevation="2dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".50"
+                        android:gravity="start"
+                        android:text="@string/country_info_abbreviation"
+                        android:textSize="@dimen/country_info_text_size" />
+
+                    <TextView
+                        android:id="@+id/countryInfoAbbreviation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/country_info_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardElevation="2dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".50"
+                        android:gravity="start"
+                        android:text="@string/country_info_calling_codes"
+                        android:textSize="@dimen/country_info_text_size" />
+
+                    <TextView
+                        android:id="@+id/countryInfoCallingCodes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/country_info_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".50"
+                        android:gravity="start"
+                        android:text="@string/country_info_capital"
+                        android:textSize="@dimen/country_info_text_size" />
+
+                    <TextView
+                        android:id="@+id/countryInfoCapital"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/country_info_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".50"
+                        android:gravity="start"
+                        android:text="@string/country_info_region"
+                        android:textSize="@dimen/country_info_text_size" />
+
+                    <TextView
+                        android:id="@+id/countryInfoRegion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/country_info_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".50"
+                        android:gravity="start"
+                        android:text="@string/country_info_population"
+                        android:textSize="@dimen/country_info_text_size" />
+
+                    <TextView
+                        android:id="@+id/countryInfoPopulations"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/country_info_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".50"
+                        android:gravity="start"
+                        android:text="@string/country_info_currencies"
+                        android:textSize="@dimen/country_info_text_size" />
+
+                    <TextView
+                        android:id="@+id/countryInfoCurrencies"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:maxLines="5"
+                        android:singleLine="false"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/country_info_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".50"
+                        android:gravity="start"
+                        android:text="@string/country_info_languages"
+                        android:textSize="@dimen/country_info_text_size" />
+
+                    <TextView
+                        android:id="@+id/countryInfoLanguages"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:maxLines="5"
+                        android:singleLine="false"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/country_info_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".50"
+                        android:gravity="start"
+                        android:text="@string/country_info_borders"
+                        android:textSize="@dimen/country_info_text_size" />
+
+                    <TextView
+                        android:id="@+id/countryInfoBorders"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:maxLines="5"
+                        android:singleLine="false"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/country_info_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:visibility="gone"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        tools:context=".view.MapsFragment" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/card_info_margin">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".50"
+                        android:gravity="start"
+                        android:text="@string/country_info_translations"
+                        android:textSize="@dimen/country_info_text_size" />
+
+                    <TextView
+                        android:id="@+id/countryInfoTranslations"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".50"
+                        android:maxLines="15"
+                        android:singleLine="false"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/country_info_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
 
 
     </LinearLayout>
-
 
 
 </ScrollView>
