@@ -93,7 +93,7 @@ public class CountryInfoActivity extends AppCompatActivity implements OnMapReady
         }
         countryInfoLanguages.setText(stringListHelper.getLanguages(country.getLanguages()));
         countryInfoTranslations.setText(stringListHelper.getTranslation(country.getTranslations()));
-        countryInfoCallingCodes.setText(country.getCallingCodes().toString());
+        countryInfoCallingCodes.setText(stringListHelper.getCallingCodes(country.getCallingCodes()));
         countryInfoRegion.setText(country.getRegion());
         if (country.getBorders() != null) {
             countryInfoBorders.setText(stringListHelper.getBorders(country.getBorders()));
