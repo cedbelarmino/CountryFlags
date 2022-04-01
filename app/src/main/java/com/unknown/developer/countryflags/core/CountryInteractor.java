@@ -37,8 +37,9 @@ public class CountryInteractor implements  CountryContract.Interactor{
             public void onResponse(@NonNull Call<List<Country>> call, @NonNull Response<List<Country>> response) {
                 if (response.isSuccessful()){
 
-                    operationListener.onSuccess(response.body());
+
                     operationListener.onEnd();
+                    operationListener.onSuccess(response.body());
                 }
 
             }

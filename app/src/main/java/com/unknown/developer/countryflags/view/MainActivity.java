@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.unknown.developer.countryflags.R;
 import com.unknown.developer.countryflags.adapter.CountryListAdapter;
 import com.unknown.developer.countryflags.core.CountryContract;
@@ -25,16 +27,24 @@ public class MainActivity extends AppCompatActivity implements CountryContract.V
     List<Country> countryList;
     CountryListAdapter countryListAdapter;
     RecyclerView recyclerView;
+    ShimmerFrameLayout container;
+
+    MenuItem menuItem;
+    boolean isflag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle(null);
-        mPresenter = new CountryPresenter(this);
-        mPresenter.getCountry();
+
         countryList = new ArrayList<>();
         recyclerView = findViewById(R.id.activity_main_flag_list);
+        container = findViewById(R.id.shimmerLayout);
+
+
+        mPresenter = new CountryPresenter(this);
+        mPresenter.getCountry();
 
     }
 
@@ -50,17 +60,31 @@ public class MainActivity extends AppCompatActivity implements CountryContract.V
 
     @Override
     public void onFailed(Throwable throwable) {
-
+        container.stopShimmer();
+        container.setVisibility(View.GONE);
+        isflag = false;
     }
 
     @Override
     public void ProcessStart() {
+        container.startShimmer();
+        container.setVisibility(View.VISIBLE);
+        isflag = false;
 
     }
 
     @Override
     public void ProcessEnd() {
+        container.stopShimmer();
+        container.setVisibility(View.GONE);
+        isflag = true;
+        menuItem.setEnabled(true);
+    }
 
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        menuItem.setEnabled(isflag);
+        return super.onPrepareOptionsMenu(menu);
     }
 
     @Override
@@ -69,8 +93,7 @@ public class MainActivity extends AppCompatActivity implements CountryContract.V
 
         getMenuInflater().inflate(R.menu.search_menu, menu);
 
-        MenuItem menuItem = menu.findItem(R.id.item_search);
-
+        menuItem = menu.findItem(R.id.item_search);
         SearchView searchView = (SearchView) menuItem.getActionView();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -107,5 +130,6 @@ public class MainActivity extends AppCompatActivity implements CountryContract.V
         }
         return super.onOptionsItemSelected(item);
     }
+
 
 }
