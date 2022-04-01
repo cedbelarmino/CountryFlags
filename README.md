@@ -12,7 +12,7 @@ CountryFlags is an Android application developed to display list of Countries ar
 
 
 ## Apk File
-* [Link](https://firebasestorage.googleapis.com/v0/b/sampleapp-38f80.appspot.com/o/country_flags.apk?alt=media&token=8763af83-990f-4f13-ab51-162a2e483d51)
+* [Link](https://firebasestorage.googleapis.com/v0/b/sampleapp-38f80.appspot.com/o/country_flags.apk?alt=media&token=0e0660eb-d64f-424a-b4d5-49a1c1c15513)
 
 
 ## Screenshots
