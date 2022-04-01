@@ -28,13 +28,11 @@ public class StringListHelper {
         return builder.toString();
     }
 
-
     public String getTranslation(Translations translations) {
 
 
         return ApplicationString.TRANSLATIONS_BR + translations.getBr() + "\n" + ApplicationString.TRANSLATIONS_PT + translations.getPt() + "\n" + ApplicationString.TRANSLATIONS_NL + translations.getNl() + "\n" + ApplicationString.TRANSLATIONS_HR + translations.getHr() + "\n" + ApplicationString.TRANSLATIONS_FA + translations.getFa() + "\n" + ApplicationString.TRANSLATIONS_DE + translations.getDe() + "\n" + ApplicationString.TRANSLATIONS_ES + translations.getEs() + "\n" + ApplicationString.TRANSLATIONS_FR + translations.getFr() + "\n" + ApplicationString.TRANSLATIONS_JA + translations.getJa() + "\n" + ApplicationString.TRANSLATIONS_IT + translations.getIt() + "\n" + ApplicationString.TRANSLATIONS_HU + translations.getHu();
     }
-
 
     public String getBorders(List<String> borders) {
         StringBuilder builder = new StringBuilder();
