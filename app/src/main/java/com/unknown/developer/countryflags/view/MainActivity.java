@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements CountryContract.V
 
     @Override
     public void onSuccess(List<Country> categoryModels) {
+        menuItem.setEnabled(true);
         countryList = categoryModels;
         countryListAdapter = new CountryListAdapter(this, countryList);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements CountryContract.V
         container.stopShimmer();
         container.setVisibility(View.GONE);
         isflag = true;
-        menuItem.setEnabled(true);
+
     }
 
     @Override

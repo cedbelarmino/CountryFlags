@@ -47,6 +47,7 @@ public class CountryInteractor implements  CountryContract.Interactor{
             @Override
             public void onFailure(@NonNull Call<List<Country>> call, @NonNull Throwable t) {
                 operationListener.onEnd();
+                operationListener.onFailure(t);
 
             }
         });
