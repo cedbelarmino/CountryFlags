@@ -1,7 +1,6 @@
 package com.unknown.developer.countryflags.view;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -40,7 +39,8 @@ public class CountryInfoActivity extends AppCompatActivity implements OnMapReady
             countryInfoRegion,
             countryInfoBorders;
     Gson gson;
-
+    double lat = 0.0;
+    double lng = 0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,8 +105,11 @@ public class CountryInfoActivity extends AppCompatActivity implements OnMapReady
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
-        double lat = country.getLatlng().get(0);
-        double lng = country.getLatlng().get(1);
+
+      if (country.getLatlng()!=null){
+           lat = country.getLatlng().get(0);
+           lng = country.getLatlng().get(1);
+      }
 
         LatLng latLng = new LatLng(lat, lng);
         googleMap.addMarker(new MarkerOptions()

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements CountryContract.V
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        setTitle(null);
         mPresenter = new CountryPresenter(this);
         mPresenter.getCountry();
         countryList = new ArrayList<>();

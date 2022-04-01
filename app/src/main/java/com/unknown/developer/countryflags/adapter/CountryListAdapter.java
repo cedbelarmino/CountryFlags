@@ -3,7 +3,6 @@ package com.unknown.developer.countryflags.adapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +21,6 @@ import com.unknown.developer.countryflags.constant.ApplicationString;
 import com.unknown.developer.countryflags.model.Country;
 import com.unknown.developer.countryflags.view.CountryInfoActivity;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
