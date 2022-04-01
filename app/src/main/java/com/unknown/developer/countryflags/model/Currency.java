@@ -3,7 +3,6 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Currency {
-
     @SerializedName("code")
     @Expose
     private String code;
