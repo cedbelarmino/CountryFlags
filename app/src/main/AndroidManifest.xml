@@ -14,7 +14,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyACH4f9i0R_bM7j3o2t3hSiFQTZKv0xpF4" />
+            android:value="" />
 
         <activity
             android:name=".view.SplashActivity"
